@@ -14,20 +14,9 @@
 
 :root {
     --background: #fff;
-    --text: #1a1a1a;
+    --text: #1a202c;
     --primary-color: #6415ff;
-}
-
-.dark-theme {
-    --background: #0d0d0d;
-    --text: #e8e8e8;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0d0d0d;
-        --text: #e8e8e8;
-    }
+    --secondary-color: #5111d0;
 }
 
 body {
@@ -61,10 +50,6 @@ button {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-}
-
-.container {
-    padding: 96px 0;
 }
 
 .purple {
@@ -131,7 +116,6 @@ nav {
     letter-spacing: 0.5px;
     font-size: 24px;
     padding-left: 14px;
-    color: #243e63;
 }
 
 .nav__logo--img {
@@ -184,7 +168,7 @@ nav {
 }
 
 .nav__link--primary:hover {
-    background-color: #5111d0;
+    background-color: var(--secondary-color);
 }
 
 .btn__menu {
@@ -271,10 +255,10 @@ header .row {
     width: 40%;
 }
 
-h1 {
+.header__title {
     font-size: 48px;
     line-height: 1.25;
-    color: rgb(26, 32, 44);
+    color: var(--text);
 }
 
 .header__description--para {
@@ -330,7 +314,7 @@ h1 {
 }
 
 .header__email--btn:hover {
-    background-color: #5111d0;
+    background-color: var(--secondary-color);
 }
 
 .header__customers--title {
@@ -424,6 +408,9 @@ QUALITY WORK ↓
     align-items: center;
 }
 
+.quality__description {
+    width: 50%;
+}
 
 /* 
 
@@ -561,3 +548,21 @@ MOBILE RESPONSIVENESS ↓
         margin-bottom: 80px;
     }
 }
+
+/* 
+
+DARK MODE ↓
+
+*/
+
+/* .dark-theme {
+    --background: #0d0d0d;
+    --text: #e8e8e8;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0d0d0d;
+        --text: #e8e8e8;
+    }
+} */
