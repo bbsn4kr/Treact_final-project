@@ -380,6 +380,11 @@ FEATURES ↓
     border-radius: 100px;
     max-width: 64px;
     justify-content: center;
+    transition: all 150ms ease;
+}
+
+.feature__img--wrapper:hover {
+    transform: scale(1.5);
 }
 
 .feature__img {
@@ -428,6 +433,35 @@ QUALITY WORK ↓
     border: 1px solid rgb(229, 231, 235);
     border-radius: 5px;
     margin: 0 48px;
+    position: relative;
+    z-index: 2;
+}
+
+.quality__img {
+    z-index: 1;
+}
+
+.quality__grid {
+    transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
+    fill: var(--primary-color);
+    width: 80px;
+    height: 80px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 0;
+    animation: gridAnim;
+    animation-timeline: view();
+    transition: all 300ms ease;
+}
+
+@keyframes gridAnim {
+    from {
+        transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1) rotate(0deg);
+    }
+    to {
+        transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1) rotate(360deg);
+    }
 }
 
 /* 
