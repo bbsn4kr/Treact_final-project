@@ -574,6 +574,10 @@ VALUES ↓
     max-width: 80%;
 }
 
+#values .btn {
+    margin-top: 40px;
+}
+
 .values__description {
     width: 50%;
 }
