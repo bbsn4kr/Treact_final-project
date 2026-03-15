@@ -66,6 +66,9 @@ button {
 }
 
 .row__narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
@@ -99,6 +102,46 @@ section {
     line-height: 1.5;
     font-weight: 500;
     font-size: 18px;
+}
+
+.plan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 24rem;
+    border: 2px solid rgb(229, 231, 255);
+    border-radius: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    margin-right: 2rem;
+}
+
+.plan__top {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.625;
+}
+
+.plan__price {
+    font-size: 48px;
+    padding: 4px 0;
+}
+
+.plan__btn {
+    height: calc(100% - 16px);
+    padding: 12px 32px;
+    width: 160px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 100px;
+    transition: all 350ms ease;
 }
 
 main {
@@ -345,12 +388,6 @@ FEATURES ↓
     position: relative;
 }
 
-#features .row__narrow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #features .section__title {
     text-align: center;
     line-height: 1.5;
@@ -589,7 +626,7 @@ VALUES ↓
 
 .value {
     padding: 0 16px;
-    transition: all 200ms ease;
+    transition: all 100ms ease;
 }
 
 .value__title {
@@ -602,13 +639,11 @@ VALUES ↓
 
 .value:nth-child(1):hover {
     border: dashed #9ae6b4;
-    transform: scale(1.1) translateY(-7px);
     cursor: crosshair;
 }
 
 .value:nth-child(2):hover {
     border: solid #feb2b2;
-    transform: scale(1.1) translateY(-7px);
     cursor: crosshair;
 }
 
@@ -660,6 +695,91 @@ PRICING ↓
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#pricing .section__para {
+    margin-bottom: 48px;
+}
+
+.plans {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.plan:nth-child(odd) .plan__name,
+.plan:nth-child(odd) .plan__price {
+    color: #1a202c;
+}
+
+.plan:nth-child(odd) .plan__duration {
+    color: #a0aec0;
+}
+
+.plan:nth-child(even) .plan__name,
+.plan:nth-child(even) .plan__price,
+.plan:nth-child(even) .plan__duration,
+.plan:nth-child(even) .plan__target,
+.plan:nth-child(even) .plan__feature {
+    color: #fff;
+}
+
+.plan:nth-child(1) .plan__btn {
+    color: #fff;
+    background: rgb(112, 230, 217);
+}
+
+.plan:nth-child(1) .plan__btn:hover {
+    background: rgb(56, 178, 172);
+}
+
+.plan:nth-child(2) {
+    background: linear-gradient(135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%)
+}
+
+.plan:nth-child(2) .plan__stripe,
+.plan:nth-child(2) .plan__best {
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.plan:nth-child(2) .plan__btn {
+    color: var(--primary-color);
+}
+
+.plan:nth-child(2) .plan__btn:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.plan:nth-child(3) .plan__btn {
+    color: #fff;
+    background: rgb(254, 178, 178);
+}
+
+.plan:nth-child(3) .plan__btn:hover {
+    background: rgb(245, 101, 101);
+}
+
+.plan__name, .plan__price, .plan__duration {
+    font-weight: bold;
+    line-height: 1.625;
+}
+
+.plan__stripe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+}
+
+.plan__name {
+    font-size: 20px;
 }
 
 /* 
