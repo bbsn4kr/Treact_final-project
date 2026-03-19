@@ -642,7 +642,7 @@ VALUES ↓
 }
 
 .value {
-    padding: 0 16px;
+    padding: 1rem;
     transition: all 100ms ease;
 }
 
@@ -985,6 +985,102 @@ START / CALL TO ACTION ↓
     overflow: hidden;
 }
 
+.start__blob {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    bottom: 0px;
+    left: 0px;
+    transform: translate(1rem, 8rem);
+    color: #5011cc;
+    opacity: 0.5;
+}
+
+.start__star {
+  position: absolute;
+  width: 400px;  
+  aspect-ratio: 1;
+  background: #5011cc;
+  opacity: 0.5;
+  clip-path: polygon(50% 0,
+    calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+    calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+   ); 
+  transform: translate(40rem, -7rem);
+}
+
+.start__container {
+    padding: 96px 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.start__title,
+.start__buttons {
+    width: 50%;
+}
+
+.start__title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+.start__buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.start__btn {
+    z-index: 2;
+    padding: 20px 40px;
+    border-radius: 100px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: 0.025;
+    margin: 1px;
+}
+
+.start__btn:nth-child(1) {
+    background: #f56565;
+    margin-right: 16px;
+    transition: all 300ms ease;
+}
+
+.start__btn:nth-child(1):hover {
+    background: #f64444;
+}
+
+.start__btn:nth-child(2) {
+    background: #55b0cc;
+    margin-left: 16px;
+    transition: all 300ms ease;
+}
+
+.start__btn:nth-child(2):hover {
+    background: #399fbe;
+}
 
 /* 
 
