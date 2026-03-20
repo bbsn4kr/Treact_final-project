@@ -1052,6 +1052,7 @@ START / CALL TO ACTION ↓
 .start__buttons {
     display: flex;
     justify-content: flex-end;
+    z-index: 2;
 }
 
 .start__btn:nth-child(1) .btn {
