@@ -19,6 +19,10 @@
     --secondary-color: #5111d0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 100vw;
     overflow-x: hidden;
@@ -1111,6 +1115,7 @@ footer {
     calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
     calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
    );
+   transform: translate(-10rem, -7rem);
 }
 
 .footer__blob {
@@ -1150,6 +1155,7 @@ footer {
 
 .footer__column--title {
     font-weight: 700;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 24px;
 }
@@ -1158,6 +1164,7 @@ footer {
     position: relative;
     text-decoration: none;
     margin: 4px 0;
+    font-size: 14px;
     line-height: 1.5;
     z-index: 2;
     transition: all 300ms ease;
@@ -1190,6 +1197,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4px;
 }
 
 .footer__column,
