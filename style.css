@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    color: #243e63;
 }
 
 *::placeholder {
@@ -14,7 +13,8 @@
 
 :root {
     --background: #fff;
-    --text: #1a202c;
+    --text: #243e63;
+    --secondary-text: #7c8ba1;
     --primary-color: #6415ff;
     --secondary-color: #5111d0;
 }
@@ -26,6 +26,16 @@ html {
 body {
     max-width: 100vw;
     overflow-x: hidden;
+    background: var(--background);
+    color: var(--text);
+}
+
+.darkmode {
+    --background: #1a202c;
+    --text: #f7fafc;
+    --secondary-text: #7c8ba1;
+    --primary-color: #6415ff;
+    --secondary-color: #5111d0;
 }
 
 p {
@@ -102,7 +112,7 @@ section {
 
 .section__para {
     max-width: 576px;
-    color: #7c8ba1;
+    color: var(--secondary-text);
     line-height: 1.5;
     font-weight: 500;
     font-size: 1.125rem;
@@ -216,6 +226,7 @@ nav {
     font-weight: 600;
     font-size: 0.875rem;
     position: relative;
+    color: var(--text);
 }
 
 .nav__link:after {
@@ -326,6 +337,37 @@ nav {
 HEADER / ABOUT US ↓
 
 */
+
+#theme__switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#theme__switch svg {
+    fill: var(--text);
+}
+
+#theme__switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme__switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme__switch svg:last-child {
+    display: block;
+}
 
 header .row {
     display: flex;
@@ -456,7 +498,7 @@ FEATURES ↓
 }
 
 .feature__para {
-    color: #7c8ba1;
+    color: var(--secondary-text);
     font-weight: 500;
     margin-top: 16px;
     line-height: 2;
@@ -557,7 +599,7 @@ STEPS ↓
     width: 10rem;
     height: 10rem;
     z-index: -1;
-    fill: #d2bdfc;
+    fill: var(--secondary-text);
     animation: GridFadeIn 1s ease forwards;
     animation-timeline: view();
     transition: all 300ms ease;
@@ -589,7 +631,7 @@ STEPS ↓
 
 .step__num {
     font-size: 2rem;
-    color: #cbd5e0;
+    color: var(--secondary-text);
     font-weight: 600;
     margin-right: 24px;
 
@@ -611,7 +653,7 @@ STEPS ↓
 .step__para {
     margin-top: 16px;
     font-size: 0.75rem;
-    color: #718096;
+    color: var(--secondary-text);
     font-weight: 500;
     line-height: 2;
 }
@@ -692,12 +734,12 @@ VALUES ↓
 .value__name {
     margin-left: 12px;
     font-size: 1.25rem;
-    color: #243e63;
+    color: var(--text);
 }
 
 .value__para {
     line-height: 1.5;
-    color: #718096;
+    color: var(--secondary-text);
     width: 90%;
 }
 
@@ -731,11 +773,11 @@ PRICING ↓
 .plan:nth-child(odd) .plan__name,
 .plan:nth-child(odd) .plan__price,
 .plan:nth-child(odd) .plan__target {
-    color: #1a202c;
+    color: var(--text);
 }
 
 .plan:nth-child(odd) .plan__duration {
-    color: #a0aec0;
+    color: var(--secondary-text);
 }
 
 .plan:nth-child(even) .plan__name,
@@ -839,7 +881,7 @@ PRICING ↓
 .plan__feature {
     font-size: 1rem;
     font-weight: 500;
-    color: #718096;
+    color: var(--secondary-text);
     margin-top: 20px;
     line-height: 1.5;
 }
@@ -909,7 +951,7 @@ TESTIMONIALS ↓
     font-weight: 700;
     line-height: 1.625;
     margin-top: 1rem;
-    color: #4a5568;
+    color: var(--text);
 }
 
 .testimonial__para {
@@ -918,7 +960,7 @@ TESTIMONIALS ↓
     font-weight: 500;
     line-height: 1.625;
     font-size: 1rem;
-    color: #4a5568;
+    color: var(--secondary-text);
 }
 
 .testimonial__bottom {
@@ -939,14 +981,14 @@ TESTIMONIALS ↓
 }
 
 .testimonial__name {
-    color: #4a5568;
+    color: var(--text);
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.625;
 }
 
 .testimonial__role {
-    color: #7c8ba1;
+    color: var(--secondary-text);
     font-weight: 500;
     line-height: 1.5;
 }
@@ -997,7 +1039,7 @@ START / CALL TO ACTION ↓
     bottom: 0px;
     left: 0px;
     transform: translate(1rem, 8rem);
-    color: #5011cc;
+    color: var(--secondary-color);
     opacity: 0.5;
 }
 
@@ -1005,7 +1047,7 @@ START / CALL TO ACTION ↓
   position: absolute;
   width: 400px;  
   aspect-ratio: 1;
-  background: #5011cc;
+  background: var(--secondary-color);
   opacity: 0.5;
   clip-path: polygon(50% 0,
     calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
@@ -1096,7 +1138,7 @@ footer {
   top: 0;
   width: 400px;  
   aspect-ratio: 1;
-  background: #5011cc;
+  background: var(--secondary-color);
   opacity: 0.5;
   clip-path: polygon(50% 0,
     calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
@@ -1114,7 +1156,7 @@ footer {
     bottom: 0px;
     right: 0px;
     transform: translate(1rem, 8rem);
-    color: #5011cc;
+    color: var(--secondary-color);
     opacity: 0.5;
 }
 
@@ -1178,7 +1220,7 @@ footer {
     width: 100%;
     height: 2px;
     margin: 64px 0;
-    background: #742cff;
+    background: var(--secondary-color);
 }
 
 .footer__bottom {
@@ -1214,7 +1256,7 @@ footer {
 }
 
 .footer__copyright {
-    color: #edf2f7;
+    color: var(--background);
 }
 
 .footer__social--links {
@@ -1295,21 +1337,3 @@ MOBILE RESPONSIVENESS ↓
         margin-bottom: 80px;
     }
 }
-
-/* 
-
-DARK MODE ↓
-
-*/
-
-/* .dark-theme {
-    --background: #0d0d0d;
-    --text: #e8e8e8;
-} */
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0d0d0d;
-        --text: #e8e8e8;
-    }
-} */
