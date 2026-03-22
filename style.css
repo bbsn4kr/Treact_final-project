@@ -416,7 +416,7 @@ header .row {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: 88%;
     height: 68px;
 }
 
@@ -445,7 +445,7 @@ header .row {
 .header__customers--title {
     font-size: 0.75rem;
     font-weight: 700;
-    color: #a0aec0;
+    color: var(--secondary-text);
     margin-top: 80px;
 }
 
@@ -1341,6 +1341,20 @@ MOBILE RESPONSIVENESS ↓
         flex-direction: column;
         align-items: center;
     }
+    .header__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header__email {
+        width: 80%;
+    }
+    .header__description,
+    .header__img--wrapper,
+    .header__customers--img {
+        width: 100%;
+    }
     footer {
         padding: 80px 32px;
     }
@@ -1368,6 +1382,18 @@ MOBILE RESPONSIVENESS ↓
     .nav__logo {
         margin: 8px 0;
         padding-bottom: 4px;
+    }
+    .header__email--input {
+        padding: 16px 0;
+        padding-left: 32px;
+        line-height: 1.5;
+    }
+    header .btn {
+        width: 100%;
+        padding: 1rem 0;
+        margin: 1rem 0;
+        margin-bottom: -8rem;
+        line-height: 1.5;
     }
     main {
         margin-bottom: 80px;
