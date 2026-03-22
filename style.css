@@ -341,6 +341,7 @@ HEADER / ABOUT US ↓
 #theme__switch {
     height: 50px;
     width: 50px;
+    max-width: 100%;
     padding: 0;
     border-radius: 50%;
     border: none;
@@ -1337,6 +1338,10 @@ MOBILE RESPONSIVENESS ↓
     .darkmode .modal__link--primary {
         color: var(--background);
     }
+    #theme__switch {
+        position:-webkit-sticky;
+        max-width: 100%;
+    }
     header .row {
         flex-direction: column;
         align-items: center;
@@ -1355,23 +1360,140 @@ MOBILE RESPONSIVENESS ↓
     .header__customers--img {
         width: 100%;
     }
+    .feature__row {
+        padding: 32px 8px;
+        margin: 0 16px;
+    }
+    #features .section__title,
+    #quality .section__title,
+    #steps .section__title,
+    #values .section__title,
+    #pricing .section__title,
+    #testimonials .section__title {
+        font-size: 36px;
+    }
+    #values .section__title {
+        max-width: 100%;
+        line-height: 1.25;
+    }
+    .steps__grid {
+        height: 5rem;
+        width: 5rem;
+        bottom: -18%;
+    }
+    #features .section__para,
+    #quality .section__para,
+    .step__para,
+    #values .section__para,
+    #pricing .section__para,
+    #testimonials .section__para {
+        font-size: 16px;
+    }
+    .plans {
+        display: flex;
+        flex-direction: column;
+    }
+    .plan {
+        margin-right: 0;
+        margin-top: 3rem;
+    }
+    .start__title {
+        width: 100%;
+        max-width: 512px;
+        text-align: center;
+    }
+    .start__buttons {
+        width: auto;
+        margin-top: 24px;
+    }
     footer {
         padding: 80px 32px;
     }
 }
 
 @media(max-width: 768px) {
+    #theme__switch {
+        position:-webkit-sticky;
+        max-width: 100%;
+    }
+    .feature {
+        width: 100%;
+        max-width: 384px;
+    }
     #quality .row,
     #values .row {
         flex-direction: column-reverse;
+    }
+    #quality .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    #quality .section__title,
+    #quality .section__para {
+        max-width: 100%;
+    }
+    #quality .section__para,
+    .step__para,
+    #values .section__para,
+    #pricing .section__para,
+    .testimonial__para {
+        font-size: 14px;
+    }
+    .quality__description,
+    .quality__img--wrapper,
+    .steps__description,
+    .steps__img--wrapper,
+    .values__description,
+    .values__img,
+    .testimonials__description,
+    .testimonials__img {
+        width: 100%;
+        max-width: 448px;
+    }
+    .quality__description,
+    .steps__description,
+    .values__description,
+    .testimonials__description {
+        margin-top: 64px;
+        text-align: center;
+        padding: 0px;
+    }
+    .step {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step__num {
+        margin-right: 0;
     }
     #steps .row,
     #testimonials .row {
         flex-direction: column;
         align-items: center;
     }
+    .values__list,
+    .value {
+        flex-direction: column;
+        align-items: center;
+    }
+    .value__title {
+        justify-content: center;
+    }
+    .value__para {
+        max-width: 100%;
+    }
     #pricing .row {
         margin-top: 40px;
+    }
+    #pricing .section__para {
+        max-width: 576px;
+        text-align: center;
+    }
+    .start__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -1395,7 +1517,27 @@ MOBILE RESPONSIVENESS ↓
         margin-bottom: -8rem;
         line-height: 1.5;
     }
+    .header__customers--title {
+        margin-top: 120px;
+        font-size: 14px;
+        letter-spacing: 0.09rem;
+    }
+    #theme__switch {
+        max-width: 100svw;
+    }
     main {
         margin-bottom: 80px;
+    }
+    .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .feature__img--wrapper {
+        margin-right: 0;
+    }
+    #features .section__title,
+    #pricing .section__title {
+        font-size: 36px;
     }
 }
