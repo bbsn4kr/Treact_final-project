@@ -1314,6 +1314,19 @@ MOBILE RESPONSIVENESS ↓
   header .row {
     align-items: flex-end;
   }
+  .values__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .plans {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+  .plan {
+    margin-right: 0;
+    margin-top: 3rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1368,6 +1381,10 @@ MOBILE RESPONSIVENESS ↓
     max-width: 100%;
     line-height: 1.25;
   }
+  .values__list {
+    display: flex;
+    flex-direction: column;
+  }
   .steps__grid {
     height: 5rem;
     width: 5rem;
@@ -1384,6 +1401,7 @@ MOBILE RESPONSIVENESS ↓
   .plans {
     display: flex;
     flex-direction: column;
+    max-width: 80%;
   }
   .plan {
     margin-right: 0;
@@ -1562,6 +1580,17 @@ MOBILE RESPONSIVENESS ↓
   .quality__img--wrapper {
     max-width: 80%;
   }
+  .plan__bottom {
+    padding: 2rem 0;
+  }
+  .testimonial__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial__profile {
+    margin-bottom: 2rem;
+  }
   .start__buttons {
     display: flex;
     flex-direction: column;
@@ -1590,5 +1619,39 @@ MOBILE RESPONSIVENESS ↓
     font-size: 14px;
     text-align: center;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .value:nth-child(2) .value__title {
+    display: flex;
+    flex-direction: column;
+  }
+  .value:nth-child(2) .value__name {
+    margin-top: 1rem;
+  }
+  .plan__bottom {
+    display: flex;
+    align-items: flex-start;
+  }
+  .plan__price {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .value:nth-child(2) .value__title {
+    display: flex;
+    flex-direction: column;
+  }
+  .value:nth-child(2) .value__name {
+    margin-top: 1rem;
+  }
+  .plan__bottom {
+    display: flex;
+    align-items: flex-start;
+  }
+  .plan__price {
+    font-size: 2rem;
   }
 }
